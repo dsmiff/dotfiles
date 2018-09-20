@@ -41,3 +41,11 @@ function rawurlencode() {
   echo "${encoded}"    # You can either set a return variable (FASTER)
   REPLY="${encoded}"   #+or echo the result (EASIER)... or both... :p
 }
+
+function devpiLogin() {
+    URL=$1
+    PORT=$2
+    USER=$3
+    devpi use "http://$1:$2"
+    devpi login "$3"
+}
